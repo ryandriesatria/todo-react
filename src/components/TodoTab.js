@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 function TodoTab({ handleChangeTab }) {
+    const [activeTab, setActiveTab] = useState("all");
     return (
         <div className='row'>
-            <ul className='nav nav-pills todo-nav'>
+            <ul className='nav nav-tabs todo-nav'>
                 <li role='presentation' className='nav-item all-task'>
                     <button
-                        className='nav-link'
+                        className={
+                            activeTab === "all" ? "nav-link active" : "nav-link"
+                        }
                         onClick={() => {
                             handleChangeTab("all");
+                            setActiveTab("all");
                         }}
                     >
                         All
@@ -16,9 +20,14 @@ function TodoTab({ handleChangeTab }) {
                 </li>
                 <li role='presentation' className='nav-item active-task'>
                     <button
-                        className='nav-link'
+                        className={
+                            activeTab === "active"
+                                ? "nav-link active"
+                                : "nav-link"
+                        }
                         onClick={() => {
                             handleChangeTab("active");
+                            setActiveTab("active");
                         }}
                     >
                         Active
@@ -26,9 +35,14 @@ function TodoTab({ handleChangeTab }) {
                 </li>
                 <li role='presentation' className='nav-item completed-task'>
                     <button
-                        className='nav-link'
+                        className={
+                            activeTab === "completed"
+                                ? "nav-link active"
+                                : "nav-link"
+                        }
                         onClick={() => {
                             handleChangeTab("completed");
+                            setActiveTab("completed");
                         }}
                     >
                         Completed

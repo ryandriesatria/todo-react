@@ -6,7 +6,7 @@ function Todo({ todos, handleChange, deleteTodo, updateTodo, isEditing }) {
 
     return todos.map((todo, index) => (
         <div key={todo.id}>
-            <div className='row'>
+            <div className='row h-auto'>
                 <div
                     className={
                         todo.isDone

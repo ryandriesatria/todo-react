@@ -36,12 +36,17 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 0 0 0 #54b3d6;
     transition: color 1s ease, box-shadow ease-in;
+    max-width: calc(100% - 112px);
 }
 
 .todo-text {
     font-family: monospace;
     font-size: large;
     padding: 0px;
+    padding-right: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .isDone {
@@ -71,4 +76,8 @@ body {
 
 .show {
     display: block;
+}
+
+.nav-link {
+    color: black;
 }
