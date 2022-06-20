@@ -49,6 +49,10 @@ body {
     white-space: nowrap;
 }
 
+.todo-nav {
+    margin: 12px 12px 0 12px;
+    padding: 0px;
+}
 .isDone {
     background-color: lightblue;
 }
